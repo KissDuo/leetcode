@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>leetcode 1</title>
+</head>
+<body>
+<div>
+    给定一个整数数组和一个目标值，找出数组中和为目标值的两个数。
+    你可以假设每个输入只对应一种答案，且同样的元素不能被重复利用。
+</div>
+<div>
+    示例:
+    给定 nums = [2, 7, 11, 15], target = 9
+    因为 nums[0] + nums[1] = 2 + 7 = 9
+    所以返回 [0, 1]
+</div>
+<script>
+    /**
+     * @param {number[]} nums
+     * @param {number} target
+     * @return {number[]}
+     */
+    var twoSum = function(nums, target) {
+        var arr = [];
+        for(var i=0;i<nums.length;i++){
+            for(var j=i+1;j<nums.length;j++){
+                if(nums[i] + nums[j] == target){
+                    arr = [i,j];
+                    return arr;
+                }
+            }
+        }
+        return arr;
+    };
+    console.log(twoSum([2, 7, 11, 15],9));
+</script>
+</body>
+</html>
